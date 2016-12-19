@@ -6,7 +6,7 @@ target 'WebCache' do
   # use_frameworks!
 
   # Pods for WebCache
-  pod 'SDWebImage', '~>3.7'
+  pod 'SDWebImage'
   pod 'SDWebImage/WebP'
   pod 'PINCache'
 

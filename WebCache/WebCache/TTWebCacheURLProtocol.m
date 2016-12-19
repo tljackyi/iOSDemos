@@ -10,6 +10,7 @@
 #import "UIImage+MultiFormat.h"
 #import "SDWebImageDecoder.h"
 #import "NSString+hash.h"
+#import <PINCache.h>
 
 static NSString *const TTWebCacheURLProtocolHandledKey = @"TTWebCacheURLProtocolHandledKey";
 static NSDictionary *cachePlist;

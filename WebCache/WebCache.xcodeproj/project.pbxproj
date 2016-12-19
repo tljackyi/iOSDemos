@@ -16,9 +16,11 @@
 		2EB4F2921DF6AC3100E059B6 /* TTWebCacheURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB4F2901DF6AC3100E059B6 /* TTWebCacheURLProtocol.m */; };
 		2EB4F2931DF6AC3100E059B6 /* TTWebCache.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EB4F2911DF6AC3100E059B6 /* TTWebCache.plist */; };
 		2EB4F2961DF6B11500E059B6 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB4F2951DF6B11500E059B6 /* NSString+Hash.m */; };
+		E826C3C6BD8D4AA42884404A /* libPods-WebCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D100235E52BB6E338803EAF9 /* libPods-WebCache.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C6FA4E10F433733E535C497 /* Pods-WebCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebCache/Pods-WebCache.release.xcconfig"; sourceTree = "<group>"; };
 		2EB4F2751DF6AC2100E059B6 /* WebCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB4F2791DF6AC2100E059B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2EB4F27B1DF6AC2100E059B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		2EB4F2911DF6AC3100E059B6 /* TTWebCache.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TTWebCache.plist; sourceTree = "<group>"; };
 		2EB4F2941DF6B11500E059B6 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		2EB4F2951DF6B11500E059B6 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		D100235E52BB6E338803EAF9 /* libPods-WebCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebCache.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAACE5961AB1E01DA9CB6088 /* Pods-WebCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebCache/Pods-WebCache.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E826C3C6BD8D4AA42884404A /* libPods-WebCache.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FA202DCDF2B248F6B188FC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D100235E52BB6E338803EAF9 /* libPods-WebCache.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2EB4F26C1DF6AC2100E059B6 = {
 			isa = PBXGroup;
 			children = (
 				2EB4F2771DF6AC2100E059B6 /* WebCache */,
 				2EB4F2761DF6AC2100E059B6 /* Products */,
+				E47CF8C27C4BD82987A7C5D5 /* Pods */,
+				1FA202DCDF2B248F6B188FC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +107,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E47CF8C27C4BD82987A7C5D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAACE5961AB1E01DA9CB6088 /* Pods-WebCache.debug.xcconfig */,
+				1C6FA4E10F433733E535C497 /* Pods-WebCache.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EB4F28C1DF6AC2100E059B6 /* Build configuration list for PBXNativeTarget "WebCache" */;
 			buildPhases = (
+				60716EBC819E1500AB0D42D6 /* [CP] Check Pods Manifest.lock */,
 				2EB4F2711DF6AC2100E059B6 /* Sources */,
 				2EB4F2721DF6AC2100E059B6 /* Frameworks */,
 				2EB4F2731DF6AC2100E059B6 /* Resources */,
+				2ACC413AD9258DD487D1936D /* [CP] Embed Pods Frameworks */,
+				D836D7A73A436735EF5FD162 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +185,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ACC413AD9258DD487D1936D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebCache/Pods-WebCache-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60716EBC819E1500AB0D42D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D836D7A73A436735EF5FD162 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebCache/Pods-WebCache-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2EB4F2711DF6AC2100E059B6 /* Sources */ = {
@@ -284,6 +359,7 @@
 		};
 		2EB4F28D1DF6AC2100E059B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAACE5961AB1E01DA9CB6088 /* Pods-WebCache.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WebCache/Info.plist;
@@ -295,6 +371,7 @@
 		};
 		2EB4F28E1DF6AC2100E059B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C6FA4E10F433733E535C497 /* Pods-WebCache.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WebCache/Info.plist;
